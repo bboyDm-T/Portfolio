@@ -28,24 +28,37 @@ print(short_names)
 # print YES, otherwise print NO. According to the Gregorian calendar, a year is a leap year if its number is a multiple of 4,
 # but not a multiple of 100 OR if it is a multiple of 400.
 years_list = [2012, 2011, 1492, 1861, 1600, 1700, 1800, 1900, 2000]
-
+#
 for year in years_list:
-    if year % 100 == 0:
-        print(f'{year} NO')
-    elif year % 4 == 0 or year % 400 == 0:
+    if year % 100 != 0 and year % 4 == 0:
+        print(f'{year} YES')
+    elif year % 400 == 0:
         print(f'{year} YES')
     else:
         print(f'{year} NO')
 
+# for year in years_list:
+#     if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:
+#         print(year, 'YES')
+#     else:
+#         print(year, 'NO')
 
 # Write a program that prompts the user for a string and checks if the string contains only unique characters.
 
-user_input = str(input("insert a string: "))
+user_input=str(input("insert string: "))
 
-unique = True
-for i in range(len(user_input)):
-    for j in range(i + 1, len(user_input)):
-        if user_input[i] == user_input[j]:
-            unique = False
+if len(user_input) == len(set(user_input)):
+    print ("all characters are unique")
+else:
+    print("not unique")
 
-print(unique)
+# user_input = str(input("insert a string: "))
+#
+# unique = True
+# for i in range(len(user_input)):
+#     for j in range(i + 1, len(user_input)):
+#         if user_input[i] == user_input[j]:
+#             unique = False
+#
+# print(unique)
+
