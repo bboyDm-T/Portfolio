@@ -2,87 +2,122 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dmitri's Data Analysis Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dmitri Teras | Data & Business Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #1a202c;
+      --secondary: #4a5568;
+      --accent: #2b6cb0;
+      --bg: #f9fafb;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--primary);
       padding: 2rem;
-      line-height: 1.6;
-      background: #f8f9fa;
-      color: #100c08;
+      max-width: 960px;
+      margin: auto;
     }
-    h1 {
-      font-size: 1.5rem;
-      text-align: left;
-      margin-bottom: 1rem;
-    }
-    .intro {
-      text-align: left;
+
+    header {
       margin-bottom: 2rem;
     }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    p.intro {
+      font-size: 1.1rem;
+      color: var(--secondary);
+    }
+
     .projects {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 2rem;
+      gap: 1.5rem;
+      margin-top: 2rem;
     }
-    .project {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
-    .project h2 {
-      margin-top: 0;
-    }
-    .footer {
-      text-align: left;
-      margin-top: 4rem;
-      font-size: 0.9rem;
-      color: #666;
-    }
-    @media (min-width: 600px) {
+
+    @media(min-width: 700px) {
       .projects {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
       }
+    }
+
+    .project {
+      background-color: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+    }
+
+    .project h2 {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .project p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: var(--secondary);
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Dmitri Teras</h1>
+    <p class="intro">Welcome to my portfolio! I work at the intersection of data, finance, and strategy. Below you'll find a selection of my analysis and coding projects — with more to come.</p>
+  </header>
 
-  <h1>Dmitri's Data Analysis Portfolio</h1>
-  <div class="intro">
-    <p>Welcome to my portfolio. Below you'll find a selection of my coding projects. This page will grow as I add more work.</p>
-  </div>
-
-  <div class="projects">
+  <section class="projects">
     <div class="project">
-      <h2>🚧 Data Scraping</h2>
-      <p>Scraping data from Estonian raviminfo database based on ATC code</p>
-      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/Scraping%20raviminfo/raviminfo%20database%20scraping.py">View scraper code on GitHub</a></p>
-      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/Scraping%20raviminfo/csv_zip_to_excel.py">View (zipped) csv to excel converter code on GitHub</a></p>
+      <h2>🔍 Data Scraping: Raviminfo</h2>
+      <p>Scraping data from the Estonian raviminfo database based on ATC codes.</p>
+      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/Scraping%20raviminfo/raviminfo%20database%20scraping.py">Scraper Code</a></p>
+      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/Scraping%20raviminfo/csv_zip_to_excel.py">CSV to Excel Converter</a></p>
     </div>
 
     <div class="project">
-      <h2>🚧 Gamma Intelligence homework</h2>
-      <p>This is a list of different Python homeworks</p>
-      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/GI%20homework/Lesson1_homework.py">View Lesson 1 on GitHub</a></p>
-      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/GI%20homework/Lesson2_homework.py">View Lesson 2 on GitHub</a></p>
-      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/GI%20homework/Lesson3_homework.py">View Lesson 3 on GitHub</a></p>
+      <h2>📘 Gamma Intelligence Homework</h2>
+      <p>A collection of Python assignments covering different topics in data analysis.</p>
+      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/GI%20homework/Lesson1_homework.py">Lesson 1</a></p>
+      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/GI%20homework/Lesson2_homework.py">Lesson 2</a></p>
+      <p><a href="https://github.com/bboyDm-T/Portfolio/blob/main/GI%20homework/Lesson3_homework.py">Lesson 3</a></p>
     </div>
+  </section>
 
-  <!-- <div class="project">
-      <h2>🚧 Project Title 3</h2>
-      <p>Description coming soon...</p>
-      <a href="#">View on GitHub</a>
-    </div>
-  </div> > -->
-
-  <div class="footer">
-    &copy; 2025 Dmitri — Built with 💻 and ☕
-  </div>
-
+  <footer class="footer">
+    &copy; 2025 Dmitri Teras — Built with 💻 and ☕ | <a href="mailto:dmitri@example.com">Contact Me</a>
+  </footer>
 </body>
 </html>
